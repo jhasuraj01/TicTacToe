@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merienda|Montserrat|EB+Garamond|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="TicTacToe.css" rel="stylesheet" />
+
+        <title>Tic Tac Toe | [ Game ]</title>  
+          <script src='TicTacToe.js'></script>
+
+    </head>
+    <body>
+     <!--  Header -->
+     <header>
+         <h1>Tic Tac Toe</h1>
+     
+     
+     <div id="closeMenu" onclick="closeMenu()"></div>
+     <div id="openMenu" onclick="openMenu()" >
+         <span></span>
+         <span></span>
+         <span></span>
+     </div></header> 
+     <div id="menuHolder">
+     <nav id='home'><i class="fas fa-home"></i> HOME</nav>
+     <nav id = 'inst' onclick='inst()'><i class="fas fa-book"></i> GUIDE</nav>  
+     <nav id="sett"><i class="fas fa-cog"></i> SETTING</nav>
+     <nav id='about' onclick='about()'><i class="fas fa-info-circle"></i> ABOUT</nav>
+     </div>
+     
+    <div id="HOME"  class="tab">
+        
+        <!-- table for tic tac toe -->
+<div id="result">
+    <div><span>You</span>(<span id="sym1">X</span>) : <span id="res1">0</span></div>
+    <div><span id="res2">0</span> : <span id="user">AI</span>(<span id="sym2">O</span>)</div>
+</div>
+       <table>
+            <tr>
+                <td>
+      <div class="pad" id="0"></div>
+                </td>
+                 <td>
+      <div class="pad" id="1"></div>
+                 <td>
+      <div class="pad" id="2"></div>                    
+                  </td>
+            </tr>
+            <tr>
+                <td>
+      <div class="pad" id="3"></div>
+                </td>
+                 <td>
+      <div class="pad" id="4"></div>
+                 <td>
+      <div class="pad" id="5"></div>                    
+                  </td>
+            </tr>
+            <tr>
+                <td>
+      <div class="pad" id="6"></div>
+                </td>
+                 <td>
+      <div class="pad" id="7"></div>
+                 <td>
+      <div class="pad" id="8"></div>                    
+                  </td>
+            </tr>
+        </table>
+   <div id="levelView">Level : Medium</div>
+   <!-- Result board -->  
+   <div id="resultBoard"  >
+       <div id="finalResult">None</div> 
+       <button id="tryAgain" onclick="playAgain() ">Try Again</button>
+         <button id="reset" onclick="startGame() " >RESET</button>
+   </div> 
+        
+    </div>
+    <div id="INST"  class="tab">
+   <center> <img src="https://dl.dropbox.com/s/92s8cl0ioijfrz0/TicTacToe.jpg?dl=0" alt="gameImage" /></center>
+   <p> <span>Step 1 :</span>
+        In Tic-Tac-Toe, two players try to line up three symbols in a vertical, horizontal or diagonal row. 
+<br><br>
+<span>Step 2 : </span> You have the first turn to play i.e you are either (X or O) then the bot will play. <br><br>
+    <span>Step 3 : </span> Hit RESET to play again. <br><br>
+    <span>Step 4 :</span> In two player mode, after either win,lose or draw the first will vary alternately.
+  <br><br>  <span>NOTE : </span> check <i>settings</i> in the menu, to play two player or change your playing symbol .
+</p> 
+
+    </div>
+    <div id="SETT" class="tab">
+        <span>1. Choose your symbol :</span><br>
+    <div id="opt" >
+        <div id="x" class="block" onclick='setPlayer("X")'>X</div>
+        <div id="o" class="block" onclick="setPlayer('O')">O</div>
+    </div>
+    <br>  
+    
+     <span>2. Choose player : </span>
+     <Select id="player" oninput="setType()">
+    <span></span>
+    <Option value="AI">AI</Option>
+    <Option value="twoPlayer">Two Player</option>
+
+    </select> <br>
+    
+     <span id="level0">3. Choose Difficulty : </span>
+     <Select id="level" oninput="startGame()">
+
+<Option value="medium">MEDIUM</option>
+    <Option value="easy">EASY</Option>    
+    <Option value="hard">HARD</option>
+
+    </select>
+   <button onclick="settGame()">Play</button>
+    
+    </div>
+    <div id="ABOUT"  class="tab">
+          <p>
+   <span>Name :</span> Tic Tac Toe <br> 
+   <span>Author: </span>Madhav <br />
+   <span>Version : </span>2.5.0 <br />
+  <span>Created on:</span> 5<sup>th</sup>,March;2019
+     <br /><br>
+    <span><u>Version Update :</u></span> <br><span>1.3.0</span><br>
+    --A simple AI added to play with<br><br>
+        
+    <span>2.2.1</span><br>
+    --A complex Ai i.e MinMax feature added<br><br>
+    <span>2.5.0</span><br>
+    --setting tab and option for two player game added.<br>
+    --some minor bugs fixed and UI changes.<br>
+    --Score board tan added to popUp on win,lose or draw .<br>
+    --Medium level introduced .<br>
+    --Game made public.<br>
+    
+          </p>
+       
+    </div>
+ 
+    </body>
+</html>
