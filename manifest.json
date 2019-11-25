@@ -9,7 +9,7 @@
         }
     ],
     "start_url": "./index.html",
-    "scope": "./",
+    "scope": "./TicTacToe/",
     "background_color": "#00c4c4",
     "display": "standalone",
     "theme_color": "#3367D6"
