@@ -1,6 +1,8 @@
 {
+    "lang": "en",
     "short_name": "Tic Tac Toe",
     "name": "Tic Tac Toe Game",
+    "description": "AI powered Tic Tac Toe Game",
     "icons": [
         {
             "src": "../images/icon192×192.png",
